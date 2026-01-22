@@ -1,0 +1,10 @@
+# This configuration file is for Netlify.
+
+# The following rule is crucial for Single Page Applications (SPAs) like React.
+# It tells Netlify that for any request path that doesn't match a file on the server,
+# it should serve the `index.html` file instead of returning a 404 error.
+# The JavaScript router will then take over and display the correct component based on the URL.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
